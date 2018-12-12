@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
+import store from './Redux/Store/store';
+import {Provider} from 'react-redux';
+import ControlPanel from './Component/ControlPanel';
+import './Style/common.scss';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            123
-          </p>
-        </header>
-      </div>
+      <Provider store={store}>
+        <ControlPanel />
+      </Provider>
     );
   }
 }
